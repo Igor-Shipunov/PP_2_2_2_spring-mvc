@@ -9,7 +9,7 @@ import web.service.CarService;
 @Controller
 public class Cars {
     @GetMapping(value = "/cars")
-    public String printCars(Model model, @RequestParam(value = "count") int count) {
+    public String printCars(Model model, @RequestParam(value = "count", defaultValue = "5") int count) {
         model.addAttribute("cars", CarService.showCars(count));
         return "result";
     }

@@ -8,7 +8,7 @@ import java.util.List;
 public class CarService {
     private static List<Car> cars = new ArrayList<>();
 
-    {
+    static {
         cars.add(new Car("model1", "maker1", 100));
         cars.add(new Car("model2", "maker2", 110));
         cars.add(new Car("model3", "maker3", 120));
